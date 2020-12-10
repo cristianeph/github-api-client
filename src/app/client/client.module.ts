@@ -8,10 +8,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ClientComponent } from './client.component';
+import {UserModule} from '../user/user.module';
 
 
 @NgModule({
-  declarations: [CommitsComponent, BranchesComponent],
+  declarations: [CommitsComponent, BranchesComponent, ClientComponent],
   imports: [
     CommonModule,
     ClientRoutingModule,
@@ -19,6 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     MatSelectModule,
+
+    UserModule,
   ]
 })
 export class ClientModule {
