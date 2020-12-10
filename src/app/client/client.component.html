@@ -1,6 +1,13 @@
-<app-profile></app-profile>
-<section class="wrapper">
-  <app-branches (selected)="list($event)"></app-branches>
-  <h3>Lista de Commits:</h3>
-  <app-commits [commits]="commits"></app-commits>
-</section>
+<app-layout maintitle="Cliente Simple Github Api">
+  <app-layout-side>
+    <app-profile></app-profile>
+  </app-layout-side>
+  <app-layout-content>
+    <section class="wrapper">
+      <app-branches (selected)="list($event)"></app-branches>
+      <h3>Lista de Commits:</h3>
+      <app-commits [commits]="commits"></app-commits>
+    </section>
+  </app-layout-content>
+</app-layout>
+

@@ -5,8 +5,11 @@
     <mat-card-subtitle>{{info?.email}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>Acerca de: {{info?.bio}}</p>
+    <p>{{info?.bio}}</p>
     <p>{{info?.public_repos}} Repositorios</p>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="openGitUrl()">Repositorio <mat-icon color="accent">link</mat-icon></button>
+  </mat-card-actions>
 </mat-card>
 

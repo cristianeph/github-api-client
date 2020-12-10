@@ -12,6 +12,7 @@ import {ClientComponent} from './client.component';
 import {UserModule} from '../user/user.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {MatTableModule} from '@angular/material/table';
     ReactiveFormsModule,
     MatTableModule,
     UserModule,
+    SharedModule
   ]
 })
 export class ClientModule {
