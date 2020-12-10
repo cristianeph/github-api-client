@@ -1,1 +1,7 @@
-<p>branches works!</p>
+<mat-form-field>
+  <mat-select>
+    <mat-option *ngFor="let branch of branches" [value]="branch">
+      {{branch.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
