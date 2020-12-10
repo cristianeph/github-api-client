@@ -1,0 +1,12 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" opened>
+    <ng-content select="app-layout-side"></ng-content>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header [maintitle]="maintitle"></app-header>
+    <section>
+      <ng-content select="app-layout-content"></ng-content>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
