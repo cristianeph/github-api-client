@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {ClientComponent} from './client.component';
 import {UserModule} from '../user/user.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatSelectModule,
     ReactiveFormsModule,
-
+    MatTableModule,
     UserModule,
   ]
 })

@@ -18,8 +18,8 @@ export class BranchesComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    await this.call();
     await this.triggers();
+    await this.call();
   }
 
   async triggers(): Promise<void> {

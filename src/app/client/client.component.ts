@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Branch} from '../shared/interfaces/branch';
+import {Commit} from '../shared/interfaces/commit';
+import {CommitsService} from '../shared/services/commits.service';
+import to from 'await-to-js';
 
 @Component({
   selector: 'app-client',
@@ -7,15 +10,17 @@ import {Branch} from '../shared/interfaces/branch';
   styleUrls: ['./client.component.scss']
 })
 export class ClientComponent implements OnInit {
+  commits: Commit[] = [];
 
-  constructor() {
+  constructor(private commitsService: CommitsService) {
   }
 
   ngOnInit(): void {
   }
 
-  list(branch: Branch): void {
-
+  async list(branch: Branch): Promise<void> {
+    const [error, response] = await to<Commit[]>(this.commitsService.listBy(branch.name).toPromise());
+    this.commits = response ? response : [];
   }
 
 }

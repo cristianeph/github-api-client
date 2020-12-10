@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <div mat-card-avatar [ngStyle]="{backgroundImage: 'info?.avatar_url', backgroundSize: 'cover'}"></div>
+    <div mat-card-avatar [ngStyle]="{'background-image': 'url('+info?.avatar_url+')', 'background-size': 'cover'}"></div>
     <mat-card-title>{{info?.name}}</mat-card-title>
     <mat-card-subtitle>{{info?.email}}</mat-card-subtitle>
   </mat-card-header>
