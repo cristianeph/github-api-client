@@ -1,1 +1,25 @@
-<p>commits works!</p>
+<table mat-table #table [dataSource]="commits" aria-label="Elements">
+  <ng-container matColumnDef="message">
+    <mat-header-cell *matHeaderCellDef>Comentarios</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.commit.message}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="author">
+    <mat-header-cell *matHeaderCellDef>Autor</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-flat-button (click)="openGitUrl(row.author.url)">Perfil <mat-icon color="accent">link</mat-icon></button>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="committer">
+    <mat-header-cell *matHeaderCellDef>Hizo commit</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.committer.login}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="commit">
+    <mat-header-cell *matHeaderCellDef>Ir al commit</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-flat-button (click)="openGitUrl(row.html_url)">Commit <mat-icon color="accent">link</mat-icon></button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>
