@@ -5,5 +5,6 @@ export interface User {
   name: string;
   email: string;
   public_repos: number;
-  repos_url: number;
+  repos_url: string;
+  bio: string;
 }
