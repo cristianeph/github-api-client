@@ -1,3 +1,5 @@
 <app-profile></app-profile>
-<app-branches></app-branches>
-<p>client works!</p>
+<section class="wrapper">
+  <app-branches (selected)="list($event)"></app-branches>
+  <h3>Lista de Commits:</h3>
+</section>

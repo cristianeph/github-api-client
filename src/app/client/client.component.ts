@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Branch} from '../shared/interfaces/branch';
 
 @Component({
   selector: 'app-client',
@@ -11,6 +12,10 @@ export class ClientComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  list(branch: Branch): void {
+
   }
 
 }
