@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Requisitos
 
-Debe tener instalado node.
+1. Debe tener instalado node.
+2. Debe instalar angular cli desde el terminal con `npm install -g @angular/cli`
 
 ## A tener en cuenta
 
