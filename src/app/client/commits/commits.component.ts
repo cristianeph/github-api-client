@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Commit} from '../../shared/interfaces/commit';
 
 @Component({
   selector: 'app-commits',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commits.component.scss']
 })
 export class CommitsComponent implements OnInit {
+  @Input() commits: Commit[] = [];
+  displayedColumns = ['commit', 'author', 'committer', 'message'];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  openGitUrl(url: string): void {
+    window.open(url);
   }
 
 }
