@@ -8,12 +8,16 @@ import {Commit} from '../../shared/interfaces/commit';
 })
 export class CommitsComponent implements OnInit {
   @Input() commits: Commit[] = [];
-  displayedColumns = ['mensaje', 'autor', 'links'];
+  displayedColumns = ['commit', 'author', 'committer', 'message'];
 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  openGitUrl(url: string): void {
+    window.open(url);
   }
 
 }
